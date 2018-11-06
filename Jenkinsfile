@@ -13,24 +13,20 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                //sh 'mvn test'
             }
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
+                    //junit 'target/surefire-reports/*.xml'
                 }
             }
         }
         stage('Deliver') {
             steps {
                 echo 'Deploying....'
-				sh 'mkdir target/regserver/'
-				sh 'cp Dockerfile target/regserver/'
+				sh 'cp Dockerfile target'
 				sh 'cd target'
-				sh 'sleep 60'
-				sh 'll'
-				sh 'cp registerserver-1.0.jar regserver/'
-				sh 'cd regserver'
+				sh 'sleep 10'
 				sh 'docker build -t regserver:0.0.1 .'
 				sh 'docker run --name eureka-server -p 8761:8761 -d -t regserver:0.0.1'
 				
