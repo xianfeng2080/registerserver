@@ -27,6 +27,7 @@ pipeline {
 				sh 'mkdir target/regserver'
 				sh 'cp Dockerfile target/regserver'
 				sh 'cd target'
+				sh 'sleep 60'
 				sh 'cp registerserver-1.0.jar regserver'
 				sh 'cd regserver'
 				sh 'docker build -t regserver:0.0.1 .'
