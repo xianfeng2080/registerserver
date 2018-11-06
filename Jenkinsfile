@@ -13,13 +13,14 @@ pipeline {
         }
         stage('Test') {
             steps {
+				echo 'Testing....'
                 //sh 'mvn test'
             }
-            post {
-                always {
+            //post {
+                //always {
                     //junit 'target/surefire-reports/*.xml'
-                }
-            }
+                //}
+            //}
         }
         stage('Deliver') {
             steps {
