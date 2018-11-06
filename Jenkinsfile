@@ -24,11 +24,12 @@ pipeline {
         stage('Deliver') {
             steps {
                 echo 'Deploying....'
-				sh 'mkdir target/regserver'
-				sh 'cp Dockerfile target/regserver'
+				sh 'mkdir target/regserver/'
+				sh 'cp Dockerfile target/regserver/'
 				sh 'cd target'
 				sh 'sleep 60'
-				sh 'cp registerserver-1.0.jar regserver'
+				sh 'll'
+				sh 'cp registerserver-1.0.jar regserver/'
 				sh 'cd regserver'
 				sh 'docker build -t regserver:0.0.1 .'
 				sh 'docker run --name eureka-server -p 8761:8761 -d -t regserver:0.0.1'
