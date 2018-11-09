@@ -75,7 +75,7 @@
 					<!-- 
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
 					<baseImage>lwieske/java-8</baseImage>
-					<entryPoint>["java", "-jar", "/registerserver-1.0.jar"]</entryPoint>
+					<entryPoint>["java", "-version"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
