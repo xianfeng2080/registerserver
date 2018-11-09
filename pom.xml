@@ -75,7 +75,7 @@
 					<!-- 
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
 					<baseImage>lwieske/java-8</baseImage>
-					<entryPoint>["java", "-jar", "/${project.build.finalNmae}.jar"]</entryPoint>
+					<entryPoint>["java", "-jar", "/serviceprovider-1.0.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
