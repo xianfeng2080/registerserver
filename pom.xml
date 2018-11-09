@@ -71,7 +71,10 @@
 					</execution>
 				</executions>
 				<configuration>
-					<imageName>registerserver:0.0.1</imageName>
+					<imageName>${project.artifactId}</imageName>
+					<imageTags>
+						<imageTag>${project.version}</imageTag>
+					</imageTags>
 					<!-- 
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
 					<baseImage>lwieske/java-8</baseImage>
