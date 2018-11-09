@@ -72,7 +72,10 @@
 				</executions>
 				<configuration>
 					<imageName>registerserver:0.0.1</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<!-- 
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
+					<baseImage>lwieske/java-8</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalNmae}.jar"]</entryPoint>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
