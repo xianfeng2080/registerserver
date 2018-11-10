@@ -77,19 +77,19 @@
 					</imageTags>
 					<!-- 
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
-					<baseImage>nginx</baseImage>
-					
-					<entryPoint>["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]</entryPoint>
-					<!-- 
+					<baseImage>lwieske/java-8</baseImage>
 					<workdir>/ROOT</workdir>
 					<cmd>["java", "-version"]</cmd>
 					<entryPoint>["java", "-jar", "/ROOT/${project.build.finalName}.jar"]</entryPoint>
+					<!-- 
+					<entryPoint>["sh", "ls"]</entryPoint>
+					
 					-->
 					<resources>
 						<resource>
-							<targetPath>/</targetPath>
+							<targetPath>/ROOT</targetPath>
 							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}</include>
+							<include>**/*</include>
 						</resource>
 					</resources>
 				</configuration>
