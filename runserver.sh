@@ -1,0 +1,1 @@
+docker run --name eureka-server -p 8761:8761 -d registerserver
