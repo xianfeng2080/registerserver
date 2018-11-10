@@ -89,7 +89,7 @@
 						<resource>
 							<targetPath>/ROOT</targetPath>
 							<directory>${project.build.directory}</directory>
-							<include>**/*</include>
+							<include>${project.build.finalName}.jar</include>
 						</resource>
 					</resources>
 				</configuration>

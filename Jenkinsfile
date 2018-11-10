@@ -32,6 +32,8 @@ pipeline {
 				//sh 'docker build -t regserver:0.0.1 .'
 				//sh 'docker run --name eureka-server -p 8761:8761 -d -t regserver:0.0.1'
 				
+				sh 'docker run --name eureka-server -p 8761:8761 -d registerserver'
+				
 				echo 'OK works....'
             }
         }
