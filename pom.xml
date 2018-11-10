@@ -77,13 +77,17 @@
 					</imageTags>
 					<!-- 
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
-					<baseImage>lwieske/java-8</baseImage>
+					<baseImage>nginx</baseImage>
+					
+					<entryPoint>["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]</entryPoint>
+					<!-- 
 					<workdir>/ROOT</workdir>
 					<cmd>["java", "-version"]</cmd>
 					<entryPoint>["java", "-jar", "/ROOT/${project.build.finalName}.jar"]</entryPoint>
+					-->
 					<resources>
 						<resource>
-							<targetPath>/ROOT</targetPath>
+							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}</include>
 						</resource>
