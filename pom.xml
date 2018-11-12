@@ -75,19 +75,12 @@
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 					</imageTags>
-					<!-- 
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> -->
 					<baseImage>lwieske/java-8</baseImage>
-					<workdir>/ROOT</workdir>
-					<cmd>["java", "-version"]</cmd>
-					<entryPoint>["java", "-jar", "/ROOT/${project.build.finalName}.jar"]</entryPoint>
-					<!-- 
-					<entryPoint>["sh", "ls"]</entryPoint>
-					
-					-->
+					<workdir>/</workdir>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
 						<resource>
-							<targetPath>/ROOT</targetPath>
+							<targetPath>/</targetPath>
 							<directory>${project.build.directory}</directory>
 							<include>${project.build.finalName}.jar</include>
 						</resource>
